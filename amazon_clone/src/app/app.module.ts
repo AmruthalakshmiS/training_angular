@@ -15,6 +15,9 @@ import { LoginComponent } from './PAGES/login/login.component';
 import { BannerComponent } from './COMPONENTS/banner/banner.component';
 import {MatCardModule} from '@angular/material/card';
 import { HttpClientModule } from '@angular/common/http';
+// import { NumberonlyDirective, NumbersOnlyDirective } from './number-onlydirective.directive';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NumbersOnlyDirective } from './number-onlydirective.directive';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,9 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     CheckoutComponent,
     LoginComponent,
-    BannerComponent
+    BannerComponent,
+    NumbersOnlyDirective
+    // NumberOnlydirectiveDirective
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatSlideToggleModule,
     MatIconModule,
     MatCardModule,
-    HttpClientModule
+    HttpClientModule,
+    // NumbersOnlyDirective,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()
