@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-book-products',
@@ -9,6 +9,12 @@ import { Component } from '@angular/core';
 })
 export class BookProductsComponent {
    public bookReview: string = 'Welcome to the mystical word'
+   public activated = false;
+   @Input ("selectedBook") selectedBook!: string;
+   public toggleActivation(){
+    this.activated = !this.activated;
+  }
+  
   }
 
 

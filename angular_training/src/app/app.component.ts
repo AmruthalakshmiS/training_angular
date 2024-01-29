@@ -10,4 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   public title: string = 'Book List';//variable setting
+  public selectedBook: string ="";
+
+  public showSelectedBook(selectedBook: string){
+    this.selectedBook=selectedBook;
+    console.log(this.selectedBook);
+  }
+
 }

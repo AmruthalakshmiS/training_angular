@@ -18,9 +18,10 @@
     
 </div>  
 
-<ng-container *ngIf="authorBooks.length>0" >
-    <ng-container *ngFor="let item of authorBooks">
-        <p (click)="showSummary(item)">{{item}}</p>
+<ng-container *ngIf="authorBooks.length>0">
+    <ng-container *ngFor="let item of authorBooks; let idx = index">
+        <div class="index-bar__item" (click)="selectBook(idx)" backgroundBlue>{{item}}</div>
+        <!-- <p (click)="showSummary(item)">{{item}}</p> -->
 
     </ng-container>
 

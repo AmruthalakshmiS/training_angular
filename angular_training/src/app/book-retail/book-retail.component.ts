@@ -1,15 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Service1Service } from '../service1.service';
 import { BooksummaryService } from '../booksummary.service';
+import { BookProductsDirective } from '../background-blue';
 
 @Component({
   selector: 'app-book-retail',
   standalone: true,
   imports: [
     CommonModule,
-    FormsModule
+    FormsModule,
+    BookProductsDirective//since standalone
   ],
   providers:[Service1Service],
   templateUrl: './book-retail.component.html',
@@ -25,7 +27,7 @@ export class BookRetailComponent implements OnInit{
 
   @Input('title') title!: string;//same name title as app.component.html@Input(getter)setter(setter name should be same used in html)
   @Input('subtitle') subtitle!: string;
-
+  @Output('selectedBook') selectedBook = new EventEmitter<string>()
   constructor(public service1: Service1Service,private booksummary:BooksummaryService) {}
 
   ngOnInit(){
@@ -60,6 +62,15 @@ export class BookRetailComponent implements OnInit{
     
     this.summary=this.booksummary.Summary(bookname)
     
+  }
+
+  public selectBook(index:number){
+    const book = this.authorBooks[index];
+    // console.log("book");
+    this.selectedBook.emit(book)
+    
+    this.showSummary(book);
+    //emited to parent
   }
 
 

@@ -2,3 +2,8 @@
 <!-- <app-book-retail></app-book-retail>
 <app-book-products></app-book-products> -->
 <!-- <p>{{bookReview}}</p> -->
+
+<!-- <h1>{{selectedBook}}</h1> -->
+<div class="book-review" backgroundBlue >{{selectedBook || 'no book selected'}}</div>
+<!-- <h1>hii{{selectedBook}}</h1> -->
+<div class="btn" [ngClass]="{'btn-active' : activated}" (click)="toggleActivation()">{{activated?'deactivate' :'Activate'}}</div>
