@@ -1,0 +1,61 @@
+<!-- <p>home works!</p> -->
+<div class="products">
+    <div class="product" *ngFor = "let item of items">
+        <mat-card>
+            <p>{{item.title}}</p>
+            <p> Rs <strong>{{item.price}}</strong></p>
+            <img src="{{item.image}}"/>
+            <button>Add to Cart</button>
+            <button (click)="showDescription(item)">Description</button>
+            <div class="product-description" *ngIf="selectedItem === item">
+                <p>{{ item.desc }}</p>
+                <p>Rating: <strong>{{item.ratings}}</strong></p>
+              </div>
+        </mat-card>
+    </div>
+
+    <!-- <div class="product">
+        <mat-card>
+            <p>Xbox one x 1TB</p>
+            <p> Rs <strong>500.0</strong></p>
+            <img src="https://images.pexels.com/photos/2106216/pexels-photo-2106216.jpeg?auto=compress&cs=tinysrgb&w=400"/>
+            <button>Add to Cart</button>
+        </mat-card>
+    </div>
+
+    <div class="product">
+        <mat-card>
+            <p>Xbox one x 1TB</p>
+            <p> Rs <strong>500.0</strong></p>
+            <img src="https://images.pexels.com/photos/2106216/pexels-photo-2106216.jpeg?auto=compress&cs=tinysrgb&w=400"/>
+            <button>Add to Cart</button>
+        </mat-card>
+    </div>
+
+    <div class="product">
+        <mat-card>
+            <p>Xbox one x 1TB</p>
+            <p> Rs <strong>500.0</strong></p>
+            <img src="https://images.pexels.com/photos/2106216/pexels-photo-2106216.jpeg?auto=compress&cs=tinysrgb&w=400"/>
+            <button>Add to Cart</button>
+        </mat-card>
+    </div>
+
+    <div class="product">
+        <mat-card>
+            <p>Xbox one x 1TB</p>
+            <p> Rs <strong>500.0</strong></p>
+            <img src="https://images.pexels.com/photos/2106216/pexels-photo-2106216.jpeg?auto=compress&cs=tinysrgb&w=400"/>
+            <button>Add to Cart</button>
+        </mat-card>
+    </div>
+
+    <div class="product">
+        <mat-card>
+            <p>Xbox one x 1TB</p>
+            <p> Rs <strong>500.0</strong></p>
+            <img src="https://images.pexels.com/photos/2106216/pexels-photo-2106216.jpeg?auto=compress&cs=tinysrgb&w=400"/>
+            <button>Add to Cart</button>
+        </mat-card>
+    </div> -->
+</div>

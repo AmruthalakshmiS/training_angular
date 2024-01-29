@@ -1,0 +1,31 @@
+<!-- <p>book-retail works!</p> -->
+{{subtitle}}
+ <h1>{{title}}</h1> 
+<h1>Book Shop</h1>
+<div class="index_bar">
+    <ng-container *ngFor="let bookretail of bookRetailDetails; let idx = index">
+    <div class="index-bar__item" (click)="showBooks(idx)">{{bookretail.name}}</div>
+
+    </ng-container>
+   
+        
+       <!-- <div class="index__items" >book1</div>
+       <div class="index__items">book2</div>
+       <div class="index__items">book3</div>
+       <div class="index__items">book4</div>
+       <div class="index__items">book5</div>
+              -->
+    
+</div>  
+
+<ng-container *ngIf="authorBooks.length>0" >
+    <ng-container *ngFor="let item of authorBooks">
+        <p (click)="showSummary(item)">{{item}}</p>
+
+    </ng-container>
+
+</ng-container>
+
+<div>
+    {{summary}}
+</div>
