@@ -1,0 +1,28 @@
+mat-stepper {
+    background-color: rgb(245, 245, 24); 
+    padding: 20px; 
+  }
+
+  mat-step {
+    border: 1px solid #272525; 
+    border-radius: 5px; 
+    margin-bottom: 20px;
+  }
+
+  .stepper-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    border-color: 2px solid#ff00ff;
+  }
+
+  
+  
+  mat-icon {
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px; 
+    margin-right: 8px;
+    font-size: 24px; 
+    border-color: 5px solid #ff00ff;
+  }

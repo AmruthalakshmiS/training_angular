@@ -1,0 +1,52 @@
+<mat-stepper>
+  <mat-step>
+    <ng-template matStepLabel>
+      <mat-icon>folder</mat-icon> Folder
+      
+    </ng-template>
+    <h1>Step1</h1>
+    <p>This is step 1</p>
+    <div>
+      <button mat-button matStepperNext>Save and continue</button>
+    </div>
+  </mat-step>
+
+
+  <mat-step>
+    <ng-template matStepLabel>
+      <mat-icon>edit</mat-icon> Edit</ng-template>
+    <h1>Step2</h1>
+    <p>This is step 2</p>
+    <div>
+      <button mat-button matStepperPrevious>Previous</button>
+      <button mat-button matStepperNext>Save and continue</button>
+    </div>
+  </mat-step>
+
+
+  <mat-step>
+    <ng-template matStepLabel>
+      <mat-icon>image</mat-icon>image</ng-template>
+    <h1>Step3</h1>
+    <p>This is step 3</p>
+    <div>
+      <button mat-button matStepperPrevious>Previous</button>
+      <button mat-button matStepperNext>Skip</button>
+      <button mat-button matStepperNext>Save and continue</button>
+    </div>
+  </mat-step>
+
+
+  <mat-step>
+    <ng-template matStepLabel>
+      <mat-icon>check</mat-icon>Done</ng-template>
+    <h1>Complete</h1>
+    <p>you have successfully completed all steps</p>
+    
+  </mat-step>
+</mat-stepper>
+
+
+
+
+
