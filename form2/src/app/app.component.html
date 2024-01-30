@@ -1,0 +1,37 @@
+<!-- template driven form -->
+
+<!-- <form #myForm="ngForm">
+  <div>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="model.name" required>
+  </div>
+
+  <div>
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="Password" [(ngModel)]="model.password" required>
+  </div>
+
+  <button type="submit">Submit</button>
+</form> --> 
+
+<!-- <input type="text" [(ngModel)] = "model.name" (ngModelChange)="newmethod($event)">//validation individual property -->
+
+
+
+<div>
+  <h1>Simple Reactive Form</h1>
+ 
+  <form [formGroup]="simpleForm" (ngSubmit)="onSubmit()">
+
+    <label for="username">Username:</label>
+    <input type="text" id="username" formControlName="name" />
+
+    <label for="password">password:</label>
+    <input type="text" id="username" formControlName="password" />
+
+   
+
+    
+    <button type="submit">Submit</button>
+  </form>
+</div>
