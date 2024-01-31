@@ -1,0 +1,145 @@
+/* .form{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin-bottom:30px ;
+    background-color: #d79bf2;
+    padding:10px
+}
+
+.adddiv{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    gap: 5px;
+}
+
+input{
+    background-color: white;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+.warning{
+    color: red;
+} */
+
+
+.form {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #e2affa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+ 
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+ 
+  input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+ 
+.gender {
+  display: flex;
+  align-items: center;
+}
+
+
+.gender label {
+    margin-top: 10px;
+  margin-right: 10px;
+}
+
+
+.gender input[type="radio"] {
+  display: none;
+}
+
+.gender label span {
+  display: inline-block;
+  cursor: pointer;
+  padding-left: 5px;
+}
+
+.gender label span:before {
+  content: '';
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #541273; 
+  border-radius: 50%;
+  margin-right: 5px; 
+  vertical-align: middle;
+}
+
+.gender input[type="radio"]:checked + span:before {
+  background-color: #431757; 
+  border-color: #541273; 
+}
+
+  /* label span {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5px;
+  } */
+  
+ 
+  .warning {
+    color: #ff0000;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  .adddiv {
+    margin-top: 15px;
+  }
+  
+  .hobbies{
+    margin-top: 15px;
+  }
+  
+  .hobbies-input {
+    width: calc(100% - 70px);
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn-hobby{
+    margin-top: 0px;
+    margin-left:340px;
+    padding: 5px;
+    background-color: #541273;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .btn {
+    margin-top: 3px;
+    margin-left: 670px;
+    width:10%;
+    padding: 10px;
+    background-color: #541273;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  

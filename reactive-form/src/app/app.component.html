@@ -1,0 +1,83 @@
+<form [formGroup]="userForm" class="form">
+
+  <label for="firstName"><strong>First Name:</strong> </label>
+  <input type="text" id="firstName" formControlName="firstName">
+  <div class="warning" *ngIf="userForm.get('firstName')?.hasError('required') && submitted">First name is required.</div>
+  <div class="warning" *ngIf="userForm.get('firstName')?.hasError('maxlength')">Maximum length is 20 characters.</div>
+
+   
+  <label for="middleName">Middle Name:</label>
+  <input type="text" id="middleName" formControlName="middleName">
+  <div class="warning" *ngIf="userForm.get('middleName')?.hasError('maxlength')">Maximum length is 20 characters.</div>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" formControlName="lastName">
+  <div class="warning" *ngIf="userForm.get('lastName')?.hasError('required') && submitted">Last Name is required.</div>
+  <div class="warning" *ngIf="userForm.get('lastName')?.hasError('maxlength')">Maximum length is 20 characters.</div>
+
+  <label for="age">Age:</label>
+  <input type="number" id="age" formControlName="age">
+  <div class="warning" *ngIf="userForm.get('age')?.hasError('required') && submitted">Age is required.</div>
+  <div class="warning" *ngIf="userForm.get('age')?.hasError('pattern')">Age should be a number.</div>
+  <div class="warning" *ngIf="userForm.get('age')?.hasError('max')">Maximum age can be 50.</div>
+  <div class="warning" *ngIf="userForm.get('age')?.hasError('min')">Minimum age should be 10.</div>
+  
+<div class="gender">
+  <label for="gender">Gender:</label>
+  <label><input type="radio" value="Male" formControlName="gender">
+            <span>Male</span>
+  </label>
+  <label><input type="radio" value="Female" formControlName="gender">
+            <span>Female</span>
+  </label>
+</div>
+
+<form formGroupName="address" class="adddiv">
+
+      <label for="street">Street:</label>
+      <input type="text" id="street" formControlName="street">
+      <div class="warning" *ngIf="userForm.get('address.street')?.hasError('required') && submitted">Street is required.</div>
+      <div class="warning" *ngIf="userForm.get('address.street')?.hasError('maxlength')">Maximum length is 20 characters.</div>
+
+      <label for="landmark">Landmark:</label>
+      <input type="text" id="landmark" formControlName="landmark">
+      <div class="warning" *ngIf="userForm.get('address.landmark')?.hasError('maxlength')">Maximum length is 20 characters.</div>
+
+
+      <label for="city">City:</label>
+      <input type="text" id="city" formControlName="city">
+      <div class="warning" *ngIf="userForm.get('address.city')?.hasError('required') && submitted">City is required.</div>
+      <div class="warning" *ngIf="userForm.get('address.city')?.hasError('maxlength')">Maximum length is 20 characters.</div>
+
+      <label for="state">State:</label>
+      <input type="text" id="state" formControlName="state">
+      <div class="warning" *ngIf="userForm.get('address.state')?.hasError('required') && submitted">State is required.</div>
+      <div class="warning" *ngIf="userForm.get('address.state')?.hasError('maxlength')">Maximum length is 20 characters.</div>
+
+      <label for="zipCode">Zip Code:</label>
+      <input type="number" id="zipCode" formControlName="zipCode">
+
+      <div class="warning" *ngIf="userForm.get('address.zipCode')?.hasError('required') && submitted">Zip Code is required.</div>
+      <div class="warning" *ngIf="userForm.get('address.zipCode')?.hasError('maxlength')">Maximum length is 20 characters.</div>
+      <div class="warning" *ngIf="userForm.get('address.zipCode')?.hasError('pattern')">Zip Code must be a number.</div>
+
+      <label for="country">Country</label>
+      <input type="text" id="country" formControlName="country">
+
+      <div class="warning" *ngIf="userForm.get('address.country')?.hasError('required') && submitted">Country is required.</div>
+      <div class="warning" *ngIf="userForm.get('address.country')?.hasError('maxlength')">Maximum length is 20 characters.</div>
+</form>
+
+  <label for="hobbies">Hobbies:</label>
+  <div class="hobbies">
+    <div class="warning" *ngFor="let hobby of userForm.get('hobbies')?.value; let i = index">
+      <input type="text" placeholder=" Enter your hobby {{ i + 1 }}">
+    </div>
+    <button class="btn-hobby" type="button" (click)="addHobby()">+ Hobby</button>
+  </div>
+
+</form>
+
+<button class="btn" (click)="submit()">Submit</button>
+
+
