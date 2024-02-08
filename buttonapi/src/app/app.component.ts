@@ -1,6 +1,8 @@
 import { Component, Inject, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HttpClient } from '@angular/common/http';
+import { ToastrService } from 'ngx-toastr';
+
 
 @Component({
   selector: 'app-root',
@@ -12,18 +14,21 @@ import { HttpClient } from '@angular/common/http';
 export class AppComponent {
   title = 'buttonapi';
   http = inject(HttpClient);
+  constructor(private toastr: ToastrService) {}
   
 
-  trueSubmit(){
+  trueApiSubmit(){
     this.http.get('https://jsonplaceholder.org/comments').subscribe((res) => {
-      console.log(res)
+      console.log(res);
+      window.alert("Check Console");
+      // this.toastr.res;
       
     })
     
 
   }
 
-  falseSubmit(){
+  falseApiSubmit(){
     this.http.get('https://jsonplaceholder.org/commentsa').subscribe((res) => {
       console.log(res)
       
