@@ -14,7 +14,7 @@ import { ToastrService } from 'ngx-toastr';
 export class AppComponent {
   title = 'buttonapi';
   http = inject(HttpClient);
-  constructor(private toastr: ToastrService) {}
+   constructor(private toastr: ToastrService) {}
   
 
   trueApiSubmit(){
@@ -28,7 +28,7 @@ export class AppComponent {
 
   }
 
-  falseApiSubmit(){
+  fakeApiSubmit(){
     this.http.get('https://jsonplaceholder.org/commentsa').subscribe((res) => {
       console.log(res)
       
